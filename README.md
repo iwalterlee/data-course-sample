@@ -4,7 +4,7 @@
 
 ## 結果
 
-- 使用 Title 或 Description 作為 Content-base filter 的訓練資料並搭配近三個月的 rule-base filtering，擁有同樣的結果，比起直接使用 Rule-base 推薦分數下降了 0.3
+- 使用 Title 或 Description 作為 Content-base filter 的訓練資料並搭配近三個月的 rule-base filtering，擁有同樣的結果，比起直接使用 Rule-base 推薦分數下降了 0.3%
 
 ## 思考過程
 
