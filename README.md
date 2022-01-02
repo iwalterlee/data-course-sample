@@ -1,13 +1,11 @@
-## 目的
+目的：
+藉由 Content-base Filtering 的方式進行商品推薦，並搭配 User Profile 進行補強
 
-建立推薦系統，以提升轉換率。預期可達到 10% 的推薦分數。
+結果：
 
-## 結果，是否有成功：
+- 使用 Title 或 Description 作為 Content-base filter 的訓練資料並搭配近三個月的 rule-base filtering，擁有同樣的結果，比起直接使用 Rule-base 推薦分數下降了 0.3%。加入 Content base 的
 
-本次專案中嘗試了兩種思維，皆不成功，最高的推薦分數為 8.3%。
+思考過程：
 
-## 兩個推薦規則與思考方向
-
-- 第一種推薦模式：直接推薦訓練期間前十最多 review 的產品 (0.08305084745762711)
-- 第二種推薦模式：透過產品推送產品 (0.0)
-    - 首先先觀察購買者的的 review histogram，發現有一則以上產品回饋的消費者佔極低的比例，因此直接使用該消費者的消費史做為推薦方式並不實際，邏輯改成為消費過同樣產品的消費者其餘購買過的產品最為推薦列表。
+- 從原始資料中適合用做 Content-base filtering 的資料欄位為 Title 以及 description
+- 在 Testing data 中，只有 38/584 有購買記錄，因此絕大多數並不適用於 Content-base filtering 的場景，因此搭配上週的 Rule-base filtering 進行推薦
